@@ -1,0 +1,577 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groccery</title>
+    <link rel="stylesheet" href="beauty.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+    <script src="tableHTMLExport.js"></script>
+    <script src="groccery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.min.js"></script>
+
+
+
+
+
+</head>
+<style>
+    body {
+        background-color: #b9b9b9;
+        color: whitesmoke;
+        
+    }
+</style>
+<br>
+
+<body class="container">
+
+   
+    
+    <style>
+        #exportButton {
+            border-radius: 0;
+        }
+    </style>
+    
+    <h2><i class="bi bi-cart"></i>&nbsp;Groccery List Generator</h2>
+    <table  class="table table-hover">
+                <!-- id = "tblCustomers" -->
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">ITEM</th>
+                <th scope="col">QUANTITY</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <!--div class="form-check"-->
+                <td> <input class="form-check-input" type="checkbox" value="పసుపు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">pasupu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="కందిపప్పు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Kandipappu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="మినపప్పు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Minapappu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="సెనగపప్పు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Senagapappu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="పెసరపప్పు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Pesarapappu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="పెసలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Pesalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="జీలకర్ర" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Jeera</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="ఆవాలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Avalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="పల్లీలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Pallilu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="పుట్నాలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Putnalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="మెంతులు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Menthulu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="ధనియాలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Dhaniyalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="నువ్వులు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Nuvvulu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="శెనగపిండి" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Senagapindi</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="బియ్యపిండి" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Biyyapindi</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="బియ్యపురవ్వ" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Biyyapuravva</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="అటుకులు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Atukulu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="మరమరాలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Maramaralu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="సగ్గుబియ్యం" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Saggubiyyam</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="పంచదార" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Panchadara</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="బెల్లం" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Bellam</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="ఉల్లిపాయలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Onions</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="అల్లం" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Allam</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="వెల్లులి" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Velluli</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="ఇంగువ-GD" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Inguva</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="జీడిపప్పు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Kaju</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="కిస్మిస్" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Kismis</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="బాదాం" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Badam</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="మిరియాలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Miriyalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="అప్పడాలు   " name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Appadalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="వంటనూనె" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Cooking Oil</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="ఎండు మిరపకాయలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Endu Mirapakayalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="గోధుమపిండి" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Godumapindi</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="మెత్తని ఉప్పు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Salt</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="కారం" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">kaaram</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="రాళ్లుప్పు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Rock Salt</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="లవంగాలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">lavangalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="యాలకులు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Yalakulu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="దాల్చినచెక్క" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">DalchinChekka</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="గసగసాలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Gasagasalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="ఇడ్లిరవ్వ" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Idli Ravva</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="ఉప్మారవ్వ" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Upma Ravva</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="ఎర్ర గోధుమరవ్వ" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Erra Goduma Ravva</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="సాంబార్ పొడి" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Sambar Powder</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="రసం పొడి" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Rasam Powder</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="శెనగలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Senagalu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="కాబూలీ శెనగలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Kabuli Chana</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="రాజ్మా" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Rajma</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="చింతపండు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Chintapandu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="మైదా" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Maida</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="సేమ్యా" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Semiya</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Maggi aata Noodles" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Maggi</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="TajMahal Tea" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Tea TajMahal</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Coffe Powder" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Coffee Powder</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Batteries" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">batteries</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Talcum Powder" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Talcum Powder</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="VIM Soap" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">VIM Bar</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="RIN Soap" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">RIN Bar</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Harpic" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Harpic</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="SurfExcel White" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">SurfExcel</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="HIT Cockroach" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">HIT Cockroach</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="కర్పూరం" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Karpuram</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="అగరబత్తీలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Agarabathi</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="గంధం పొడి" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Gandam Podi</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="వత్తులు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Vathulu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="అగ్గి పెట్టెలు" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Aggi Pettelu</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="కొబ్బరి నూనె" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Hair Oil</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Shampoo" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Shampoo</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="నెయ్యి-Krishna" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Ghee</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="పచ్చి బఠాణి" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Pachi Batani</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Tooth Brush" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">Tooth Brush</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Tooth Paste" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Tooth Paste</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Mysore Sandal" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Mysore Sandal</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="Oats" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault">Oats</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+            </tr>
+            <tr>
+                <td> <input class="form-check-input" type="checkbox" value="కారం" name="flexCheckDefault"></td>
+                <td> <label class="form-check-label" for="flexCheckDefault" value="Item2">kaaram</label></td>
+                <td> <input value="0" data-decimals="3" min="0" max="10" step="0.250" type="number" id="line"
+                        name="line" /></td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <button type="button" id="btnPrint" onclick="displaySelected()" class="btn btn-primary">Submit</button>
+      
+</body>
+</head>
+
+</html>
